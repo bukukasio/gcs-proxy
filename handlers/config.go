@@ -48,6 +48,7 @@ type ProxyConfig struct {
 	LogHeaders   []string      `envconfig:"GCS_HELPER_PROXY_LOG_HEADERS"`
 	Timeout      time.Duration `envconfig:"GCS_HELPER_PROXY_TIMEOUT" default:"10s"`
 	BucketOnPath bool          `envconfig:"GCS_HELPER_PROXY_BUCKET_ON_PATH"`
+	RootRedirect string        `envconfig:"GCS_HELPER_ROOT_REDIRECT"`
 }
 
 // ClientConfig contains configuration for the GCS client communication.
