@@ -59,6 +59,12 @@ func (h *proxyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
+
+	// If GCS_HELPER_ROOT_REDIRECT is set, '/' should redirect to the given path
+	if r.URL.Path == "/" && h.config.Proxy.RootRedirect != "" {
+		r.URL.Path = h.config.Proxy.RootRedirect
+	}
+
 	if r.URL.Path == "/" {
 		w.WriteHeader(http.StatusOK)
 		return
