@@ -1,17 +1,10 @@
-# gcs-helper
+# gcs-proxy
 
-This project is no longer maintained. If you need this repository to be un-archived, please fork it.
+gcs-proxy is a tool that acts as a server for your GCS bucket.
 
-[![Build Status](https://cloud.drone.io/api/badges/nytimes/gcs-helper/status.svg)](https://cloud.drone.io/nytimes/gcs-helper)
-[![codecov](https://codecov.io/gh/nytimes/gcs-helper/branch/master/graph/badge.svg)](https://codecov.io/gh/nytimes/gcs-helper)
+This project is forked from [NYTimes/gcs-helper](https://github.com/nytimes/gcs-helper). Since the original repository is archived, we have forked it to maintain and further improve it.
 
-gcs-helper is inspired by
-[s3-helper](https://github.com/crunchyroll/evs-s3helper) and is used to provide
-access to private GCS buckets.
-
-It was designed to be used with [Kaltura's
-nginx-vod-module](https://github.com/kaltura/nginx-vod-module), but it can also
-work as a standalone proxy.
+It was designed to be used with [Kaltura's nginx-vod-module](https://github.com/kaltura/nginx-vod-module), but it can also work as a standalone proxy.
 
 Specific to nginx-vod-module, gcs-helper provides support for the mapped mode
 (when using the proper environment variables - ``GCS_HELPER_PROXY_PREFIX``,
